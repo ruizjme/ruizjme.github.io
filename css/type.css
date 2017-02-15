@@ -8,6 +8,16 @@ FOR TYPE
 #bio{
 	text-align: center;
 	margin: 25px auto;
+	padding: 0 20px;
+}
+
+#disclaimer{
+	font-style: italic;
+	color: #E0E0E0;
+	font-size: 0.8em;
+	text-align: center;
+	margin: 10px auto;
+	padding: 0 20px;
 }
 
 /************************* Link bubbles **************************/
@@ -24,11 +34,14 @@ a, a:hover {
 
 }
 
-#swinburne 			{background: #7CB342;}
-#swinburne:hover	{background: #558B2F;}
-
-#big-words 			{background: #FF3D00;}
-#big-words:hover	{background: #DD2C00;}
+#swinburne 				{background: #7CB342;}
+#swinburne:hover		{background: #558B2F;}
 
 #auto-espresso 			{background: #FFEB3B;}
 #auto-espresso:hover	{background: #FBC02D;}
+
+#big-words 				{background: #FF3D00;}
+#big-words:hover		{background: #DD2C00;}
+
+#nerd					{background: #4FC3F7;}
+#nerd:hover				{background: #03A9F4;}
