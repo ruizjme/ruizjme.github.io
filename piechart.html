@@ -20,24 +20,49 @@
         data.addColumn('string', 'Occupation');
         data.addColumn('number', 'Hours');
         data.addRows([
-          ['Engineering Student', 23],
-          ['Barista', 12],
+          ['Engineering Student', 29],
+          ['Barista', 11],
           ['Musician', 10],
           ['Involved', 4],
-          ['Other (inc. sleeping)', 79]
+          ['Other', 4] //58
         ]);
 
         // Set chart options
-        var options = {'title':'Occupations',
-                       'width':400,
-                       'height':300,
-                        'pieHole':0.6};
+        var options = { width: screen.width,
+                        height: 300,
+                        pieHole: 0.5,
+                        pieSliceText: 'none',
+                        legend: {position: 'bottom', maxLines: 2, textStyle: {color: 'black', fontSize: 16}},
+                        tooltip: {trigger:'none', text: 'percentage', showColorCode:true}
+                      };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+
+      function myClickHandler(){
+        var selection = myVis.getSelection();
+        var message = '';
+
+        for (var i = 0; i < selection.length; i++) {
+          var item = selection[i];
+          if (item.row != null && item.column != null) {
+            message += '{row:' + item.row + ',column:' + item.column + '}';
+          } else if (item.row != null) {
+            message += '{row:' + item.row + '}';
+          } else if (item.column != null) {
+            message += '{column:' + item.column + '}';
+          }
+        }
+        if (message == '') {
+          message = 'nothing';
+        }
+        alert('You selected ' + message);
+      }
     </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/graphics.css">
   </head>
 
   <body>
