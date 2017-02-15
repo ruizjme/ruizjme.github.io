@@ -5,6 +5,18 @@ FOR CHARTS, ICONS, ETC
 
 **************/
 
+
 #chart_div{
 	margin: auto;
+	text-align: center;
+}
+
+#sm-icons{
+	margin: auto;
+	text-align: center;	
+}
+
+#sm-icons > a > img{
+	width: 20px;
+	margin-left: 5px;
 }

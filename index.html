@@ -49,51 +49,42 @@
 
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="js/piechart.js"></script>
 
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Occupation');
-        data.addColumn('number', 'Hours');
-        data.addRows([
-          ['Engineering Student', 29],
-          ['Barista', 11],
-          ['Musician', 10],
-          ['Involved', 4],
-          ['Other', 4] //58
-        ]);
-
-        // Set chart options
-        var options = { width: window.innerWidth,
-                        height: 300,
-                        pieHole: 0.5,
-                        pieSliceText: 'none',
-                        legend: {position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
-                        tooltip: {trigger:'none', text: 'percentage', showColorCode:true}
-                      };
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/graphics.css">
+    <link rel="stylesheet" href="css/type.css">
   </head>
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <div class="row">
+	    <div class="col-sm-12">
+		    <div id="chart_div"></div>
+	    </div>
+	</div>  
+	<div class="row">
+	    <div class="col-sm-12">
+		    <div id="bio">
+		    	<h1>Jaime Ruiz</h1>
+		    	<p>
+		    	Currently studying <a id="swinburne" href="http://www.swinburne.edu.au/study/course/bachelor-of-engineering-honours-professional/robotics-and-mechatronics/">Robotics and Mechatronics</a> Engineering at Swinburne University. 
+		    	Also playing guitar with <a id="big-words" href="https://play.spotify.com/artist/0sHN89qak07mnug3LVVjzP">Big Words</a>, and learning Python and Mandarin Chinese at home.
+		    	</p>
+		    </div>
+	    </div>
+	</div> 
+	<div class="row">
+	    <div class="col-sm-12">
+		    <div id="sm-icons">
+		    	<a href="https://www.instagram.com/ruizjme/"><img src="img/ig.png"/></a>
+		    	<a href="https://www.linkedin.com/in/ruizjme"><img src="img/in.png"/></a>
+		    	<a href="https://twitter.com/ruizjme_/"><img src="img/tw.png"/></a>
+		    	<a href="http://codepen.io/ruizjme/"><img src="img/cp.png"/></a>
+		    	<a href="https://github.com/ruizjme"><img src="img/gh.png"/></a>
+		    </div>
+	    </div>
+	</div>  
+
   </body>
 </html>
