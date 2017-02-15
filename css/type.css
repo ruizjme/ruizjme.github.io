@@ -5,6 +5,14 @@ FOR TYPE
 
 **************/
 
+body{
+	font-family: 'Karla', sans-serif;
+}
+
+h1{
+	font-weight: bold;
+}
+
 #bio{
 	text-align: center;
 	margin: 25px auto;

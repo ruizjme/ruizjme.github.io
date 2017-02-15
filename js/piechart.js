@@ -27,6 +27,7 @@
                         height: 300,
                         pieHole: 0.5,
                         pieSliceText: 'none',
+                        fontName: 'Karla',
                         legend: {position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
                         tooltip: {trigger:'none', text: 'percentage', showColorCode:true},
                         colors:['#7CB342','#FFEB3B','#FF3D00','#4FC3F7','#BDBDBD']
