@@ -7,7 +7,7 @@ FOR TYPE
 
 #bio{
 	text-align: center;
-	margin:auto;
+	margin: 25px auto;
 }
 
 /************************* Link bubbles **************************/
@@ -29,3 +29,6 @@ a, a:hover {
 
 #big-words 			{background: #FF3D00;}
 #big-words:hover	{background: #DD2C00;}
+
+#auto-espresso 			{background: #FFEB3B;}
+#auto-espresso:hover	{background: #FBC02D;}

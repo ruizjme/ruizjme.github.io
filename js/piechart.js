@@ -18,7 +18,7 @@
           ['Engineering Student', 29],
           ['Barista', 11],
           ['Musician', 10],
-          ['Involved', 4],
+          ['Nerd', 4],
           ['Other', 4] //58
         ]);
 
@@ -28,7 +28,8 @@
                         pieHole: 0.5,
                         pieSliceText: 'none',
                         legend: {position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
-                        tooltip: {trigger:'none', text: 'percentage', showColorCode:true}
+                        tooltip: {trigger:'none', text: 'percentage', showColorCode:true},
+                        colors:['#7CB342','#FFEB3B','#FF3D00','#4FC3F7','#BDBDBD']
                       };
 
         // Instantiate and draw our chart, passing in some options.
