@@ -41,10 +41,8 @@
 
 	<!-- CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
 	<!-- JS -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -72,6 +70,7 @@
 	    <div class="col-sm-12">
 		    <div id="bio">
 		    	<h1>Jaime Ruiz</h1>
+		    	<br>
 		    	<p>
 		    	Currently studying <a id="swinburne" href="http://www.swinburne.edu.au/study/course/bachelor-of-engineering-honours-professional/robotics-and-mechatronics/">Robotics and Mechatronics</a> Engineering at Swinburne University, making coffee at <a id="auto-espresso" href="https://www.zomato.com/melbourne/auto-espresso-cbd/photos">Auto Espresso</a>, playing guitar with <a id="big-words" href="https://play.spotify.com/artist/0sHN89qak07mnug3LVVjzP">Big Words</a>, and learning <a id="nerd" href="#">Programming</a> and <a id="nerd" href="#">Mandarin Chinese</a> autodidactically.
 		    	</p>
@@ -82,21 +81,33 @@
 	<div class="row">
 	    <div class="col-sm-12">
 		    <div id="sm-icons">
-		    	<a href="https://www.linkedin.com/in/ruizjme"><img src="img/in.png"/></a>
-		    	<a href="https://www.instagram.com/ruizjme/"><img src="img/ig.png"/></a>
-		    	<a href="http://codepen.io/ruizjme/"><img src="img/cp.png"/></a>
-		    	<a href="https://github.com/ruizjme"><img src="img/gh.png"/></a>
-		    	<a href="https://www.behance.net/ruizjme"><img src="img/be.png"/></a>
-		    	<a href="https://twitter.com/ruizjme_/"><img src="img/tw.png"/></a>
+		    	<a href="https://www.linkedin.com/in/ruizjme">	<img src="img/in.png"/></a>
+		    	<a href="https://www.instagram.com/ruizjme/">	<img src="img/ig.png"/></a>
+		    	<a href="http://codepen.io/ruizjme/">			<img src="img/cp.png"/></a>
+		    	<a href="https://github.com/ruizjme">			<img src="img/gh.png"/></a>
+		    	<a href="https://www.behance.net/ruizjme">		<img src="img/be.png"/></a>
+		    	<a href="https://twitter.com/ruizjme_/">		<img src="img/tw.png"/></a>
 		    	<a href="mailto:hello@ruizjaime.com?subject=Cool%20Website"><img src="img/em.png"/></a>
 		    </div>
 	    </div>
 	</div>
 
-	<div class="row" id="disclaimer">
+	<div 	
+			class="row" 
+			id="disclaimer" 
+			title="This is a work in progress. Chart data from time tracker, through Google Sheets. Last updated Feb 2017."
+			data-toggle="tooltip"
+			>
+
 	    <div class="col-sm-12">
-		    	Work in progress. Feb 2017.
+		    	About this page
 	    </div>
 	</div>    
+
+	<script>
+		$(document).ready(function(){
+   		$('[data-toggle="tooltip"]').tooltip(); 
+		});
+	</script>
   </body>
 </html>

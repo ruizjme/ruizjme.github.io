@@ -13,7 +13,7 @@
     }
 
     function handleSampleDataQueryResponse(response) {
-      
+
       if (response.isError()) {
         alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
@@ -22,11 +22,11 @@
       var data = response.getDataTable();
 
       var options = { //width: 800, // $('#chart_div').width() or window.innerWidth
-                        height: 300,
+                        height: 350,
                         pieHole: 0.5,
                         pieSliceText: 'none',
                         fontName: 'Karla',
-                        legend: {position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
+                        legend: 'none',//{position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
                         tooltip: {trigger:'none', text: 'percentage', showColorCode:true},
                         colors:['#7CB342','#FFEB3B','#FF3D00','#4FC3F7','#BDBDBD']
                       };
