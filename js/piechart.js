@@ -3,27 +3,25 @@
       google.charts.load('current', {'packages':['corechart']});
 
       // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawSheetName); 
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
+      function drawSheetName() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Occupation');
-        data.addColumn('number', 'Hours');
-        data.addRows([
-          ['Engineering Student', 29],
-          ['Barista', 11],
-          ['Musician', 10],
-          ['Nerd', 4],
-          ['Other', 4] //58
-        ]);
+      var query = new google.visualization.Query(
+          'https://docs.google.com/spreadsheets/d/186MEQTg6n7N1y0xktvxaySYgb2M3N8PgnoaJeHVeqjk/gviz/tq?range=A1:B6');
+      query.send(handleSampleDataQueryResponse);
+    }
 
-        // Set chart options
-        var options = { //width: 800, // $('#chart_div').width() or window.innerWidth
+    function handleSampleDataQueryResponse(response) {
+      
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+
+      var data = response.getDataTable();
+
+      var options = { //width: 800, // $('#chart_div').width() or window.innerWidth
                         height: 300,
                         pieHole: 0.5,
                         pieSliceText: 'none',
@@ -33,25 +31,7 @@
                         colors:['#7CB342','#FFEB3B','#FF3D00','#4FC3F7','#BDBDBD']
                       };
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
-
-        ////////////////////////////
-        // The select handler. Call the chart's getSelection() method
-        function selectHandler() {
-          var selectedItem = chart.getSelection()[0];
-          if (selectedItem) {
-            var value = data.getValue(selectedItem.row, selectedItem.column);
-            alert('The user selected ' + value);
-          }
-        }
-
-        // Listen for the 'select' event, and call my function selectHandler() when
-        // the user selects something on the chart.
-        google.visualization.events.addListener(chart, 'select', selectHandler);
-        /////////////////////////
-
-
-        chart.draw(data, options);
-      }
+      chart.draw(data, options);
+    }
