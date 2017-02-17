@@ -29,11 +29,23 @@
                         pieSliceText: 'none',
                         fontName: 'Karla',
                         legend: 'none',//{position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
-                        tooltip: {trigger:'none', text: 'percentage', showColorCode:true},
+                        tooltip: { isHtml: 'true', text: 'percentage', showColorCode:true}, //trigger:'none',
                         colors:['#14A697','#F2C12E','#F29D35','#F25252','#BDBDBD']
                       };
 
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
       chart.draw(data, options);
+
+
+
+      /////////////////
+
+
+                  google.visualization.events.addListener(chart, 'select', selectHandler);
+
+            function selectHandler(e) {
+              alert('Selected');
+            }
     }
+
