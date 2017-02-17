@@ -8,7 +8,8 @@
       function drawSheetName() {
 
       var query = new google.visualization.Query(
-          'https://docs.google.com/spreadsheets/d/186MEQTg6n7N1y0xktvxaySYgb2M3N8PgnoaJeHVeqjk/gviz/tq?range=A1:B6');
+                'https://docs.google.com/spreadsheets/d/186MEQTg6n7N1y0xktvxaySYgb2M3N8PgnoaJeHVeqjk/gviz/tq?range=A1:B6');
+      
       query.send(handleSampleDataQueryResponse);
     }
 
@@ -24,11 +25,12 @@
       var options = { //width: 800, // $('#chart_div').width() or window.innerWidth
                         height: 350,
                         pieHole: 0.5,
+                        backgroundColor: '#F8F8F8',
                         pieSliceText: 'none',
                         fontName: 'Karla',
                         legend: 'none',//{position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
                         tooltip: {trigger:'none', text: 'percentage', showColorCode:true},
-                        colors:['#7CB342','#FFEB3B','#FF3D00','#4FC3F7','#BDBDBD']
+                        colors:['#14A697','#F2C12E','#F29D35','#F25252','#BDBDBD']
                       };
 
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
