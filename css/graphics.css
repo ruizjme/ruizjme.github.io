@@ -32,3 +32,13 @@ footer {
 	border:none;
 	background:none;
 }
+
+.clipboard {
+position: fixed !important;
+z-index: 1060;
+display: none;
+text-align: center;
+background-color: #555 !important;
+border-radius: 0.25em !important;
+color: white;
+}
