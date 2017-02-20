@@ -29,7 +29,7 @@
                         pieSliceText: 'none',
                         fontName: 'Karla',
                         legend: 'none',//{position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
-                        tooltip: { isHtml: 'true', text: 'percentage', showColorCode:true}, //trigger:'none',
+                        tooltip: { trigger:'none', text: 'percentage', showColorCode:true}, //trigger:'none'
                         colors:['#14A697','#F2C12E','#F29D35','#F25252','#BDBDBD']
                       };
 
@@ -39,13 +39,20 @@
 
 
 
-      /////////////////
+      ///////////////// WIP: HOVER LINKED TO LINK BUBBLES
 
 
-                  google.visualization.events.addListener(chart, 'select', selectHandler);
+      //google.visualization.events.addListener(chart, 'onmouseover', overHandler); //onmouseover, onmouseout, select
+      //google.visualization.events.addListener(chart, 'onmouseout', outHandler);
 
-            function selectHandler(e) {
-              alert('Selected');
+            function overHandler(e) {
+              $('#music').css("background", "red");
+              console.log(data.getValue(0,0)) // The index should match the hover
+            }
+
+            function outHandler(e) {
+              $('#music').css("background", "green");
+              console.log('hover')
             }
     }
 

@@ -33,7 +33,7 @@ h1{
 /************************* Link bubbles **************************/
 
 
-a, a:hover, a:active {
+a, a:hover, a:active, a:focus {
     padding: 0.05em 0.35em;
     margin: 0.05em 0.05em;
     display: inline-block;
@@ -44,14 +44,14 @@ a, a:hover, a:active {
 }
 
 
-#swinburne 				{background: #14A697;}
-#swinburne:hover		{background: #14A697;}
+#eng-student 			{background: #14A697;}
+#eng-student:hover		{background: #12897A;}
 
 #auto-espresso 			{background: #F2C12E;}
-#auto-espresso:hover	{background: #F2C12E;}
+#auto-espresso:hover	{background: #D6A52B;}
 
-#big-words 				{background: #F29D35;}
-#big-words:hover		{background: #F29D35;}
+#music 					{background: #F29D35;}
+#music:hover			{background: #D68432;}
 
 #nerd					{background: #F25252;}
-#nerd:hover				{background: #F25252;}
+#nerd:hover				{background: #D84C4C;}
