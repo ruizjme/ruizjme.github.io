@@ -6,17 +6,29 @@ FOR CHARTS, ICONS, ETC
 **************/
 
 
-#chart_div{
+#chart_div {
 	margin: auto;
 	text-align: center;
 }
 
-#sm-icons{
+footer {
+	width: 100%;
+	position: fixed;
+	bottom:0;
+	margin:auto;
+}
+
+#sm-icons {
 	margin: 20px auto 0 auto;
 	text-align: center;	
 }
 
-#sm-icons > a > img{
+#sm-icons > a > img, #sm-icons > button > img {
 	width: 20px;
 	margin-left: 5px;
+}
+
+#sm-icons > button {
+	border:none;
+	background:none;
 }

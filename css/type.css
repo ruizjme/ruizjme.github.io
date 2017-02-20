@@ -10,13 +10,17 @@ body{
 	background-color: #F8F8F8;
 }
 
+*:focus {
+    outline: none;
+}
+
 h1{
 	font-weight: bold;
 }
 
 #bio{
 	text-align: center;
-	margin: 25px auto;
+	margin: 25px auto 100px auto;
 	padding: 0 20px;
 	max-width: 750px;
 }
@@ -40,7 +44,7 @@ a, a:hover, a:active, a:focus {
     border-radius: 0.25em;
     color:white;
     font-weight: bold;
-	text-decoration: none;
+	text-decoration: none;;
 }
 
 
