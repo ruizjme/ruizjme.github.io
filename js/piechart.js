@@ -22,37 +22,40 @@
 
       var data = response.getDataTable();
 
-      var options = { //width: 800, // $('#chart_div').width() or window.innerWidth
+      // 'Library' of colours for both states.
+      var colors = {    rest: ['#14A697','#F2C12E','#F29D35','#F25252','#BDBDBD'], 
+                        hover:['#12897A','#D6A52B','#D68432','#D84C4C','#BBBBBB']   }
+
+      // Match the table's row index to each class.
+      var rows = ['.eng-student', '.auto-espresso', '.music','.nerd','.other']
+
+      var options = { //width: 800,                   // $('#chart_div').width() or window.innerWidth
                         height: 350,
                         pieHole: 0.5,
+                        fontName: 'Karla',
                         backgroundColor: '#F8F8F8',
                         pieSliceText: 'none',
-                        fontName: 'Karla',
-                        legend: 'none',//{position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
-                        tooltip: { trigger:'none', text: 'percentage', showColorCode:true}, //trigger:'none'
-                        colors:['#14A697','#F2C12E','#F29D35','#F25252','#BDBDBD']
+                        legend: 'none',               // {position: 'bottom', maxLines: 5, textStyle: {color: 'black', fontSize: 16}},
+                        tooltip: { trigger:'none', text: 'percentage', showColorCode:true}, // trigger:'none'
+                        colors: colors['rest']
                       };
 
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
+      // Handle mouse hover on slices and links.
+      google.visualization.events.addListener(chart, 'onmouseover', overHandler);
+      google.visualization.events.addListener(chart, 'onmouseout', outHandler);
+
+      function overHandler(gglEvent) {
+        $(rows[gglEvent.row]).css("background", colors['rest'][gglEvent.row]);
+        $(rows[gglEvent.row]).css("border-bottom", '5px solid'+colors['hover'][gglEvent.row]);
+      }
+
+      function outHandler(gglEvent) {
+        $(rows[gglEvent.row]).css("background", colors['rest'][gglEvent.row]);
+        $(rows[gglEvent.row]).css("border-bottom", 'none');
+      }
+
       chart.draw(data, options);
-
-
-
-      ///////////////// WIP: HOVER LINKED TO LINK BUBBLES
-
-
-      //google.visualization.events.addListener(chart, 'onmouseover', overHandler); //onmouseover, onmouseout, select
-      //google.visualization.events.addListener(chart, 'onmouseout', outHandler);
-
-            function overHandler(e) {
-              $('#music').css("background", "red");
-              console.log(data.getValue(0,0)) // The index should match the hover
-            }
-
-            function outHandler(e) {
-              $('#music').css("background", "green");
-              console.log('hover')
-            }
     }
 

@@ -44,14 +44,14 @@ a, a:hover, a:active, a:focus {
 }
 
 
-#eng-student 			{background: #14A697;}
-#eng-student:hover		{background: #12897A;}
+.eng-student 			{background: #14A697;}
+.eng-student:hover		{background: #12897A;}
 
-#auto-espresso 			{background: #F2C12E;}
-#auto-espresso:hover	{background: #D6A52B;}
+.auto-espresso 			{background: #F2C12E;}
+.auto-espresso:hover	{background: #D6A52B;}
 
-#music 					{background: #F29D35;}
-#music:hover			{background: #D68432;}
+.music 					{background: #F29D35;}
+.music:hover			{background: #D68432;}
 
-#nerd					{background: #F25252;}
-#nerd:hover				{background: #D84C4C;}
+.nerd					{background: #F25252;}
+.nerd:hover				{background: #D84C4C;}
